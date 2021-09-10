@@ -1,0 +1,34 @@
+src/res/images/thumbnails/dvds/0.png	0	Harry Potter and the Philosopher's Stone	2001	4 Weeks	5	Chris Columbus	English	5	English	French	German	Spanish	Japanese	152	5	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+3	true	null	null	0	
+4	true	null	null	0	
+0
+src/res/images/thumbnails/dvds/3.png	3	Spirited Away	2001	1 Week	1	Hayao Miyazaki	Japanese	2	Japanese	English	125	1	0	
+0	true	null	null	0	
+0
+src/res/images/thumbnails/dvds/6.png	6	Harry Potter and the Chamber of Secrets	2002	1 Week	6	Chris Columbus	English	1	English	161	6	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+3	true	null	null	0	
+4	true	null	null	0	
+5	true	null	null	0	
+0
+src/res/images/thumbnails/dvds/20.png	20	Amélie	2001	1 Day	0	Jean-Pierre Jeunet	French	3	English	French	German	123	0	0	
+0
+src/res/images/thumbnails/dvds/21.png	21	Star Wars: Episode IV – A New Hope	1977	2 Weeks	0	George Lucas	English	1		121	0	0	
+0
+src/res/images/thumbnails/dvds/22.png	22	The Avengers	2012	2 Weeks	0	Joss Whedon	English	3	English	Chineese	Spanish	143	0	0	
+0
+src/res/images/thumbnails/dvds/23.png	23	Dynasties	2018	1 Day	1	BBC Natural History Unit	English	1	English	59	1	0	
+0	true	null	null	0	
+0
+src/res/images/thumbnails/dvds/24.png	24	Human Universe	2014	2 Weeks	5	Gideon Bradshaw	English	1	English	355	5	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+3	true	null	null	0	
+4	true	null	null	0	
+0

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER_LEFT" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Frontend.Nodes.UserViewer">
+   <children>
+      <VBox alignment="CENTER" minHeight="90.0" minWidth="90.0">
+         <children>
+            <ImageView fx:id="profileImage" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../res/images/ui/exclamation-mark.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <BorderPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="450.0">
+         <left>
+            <VBox BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <Label fx:id="userSince" text="ERROR RETRIEVING JOIN DATE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label fx:id="isLibrarian" text="ERROR RETRIEVING STATUS">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <Label fx:id="userNameLabel" maxHeight="200.0" text="ERROR RETRIEVING USERNAME" wrapText="true" BorderPane.alignment="TOP_LEFT">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+      </BorderPane>
+      <Separator layoutX="356.0" layoutY="10.0" orientation="VERTICAL" />
+      <VBox alignment="CENTER" />
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+   <effect>
+      <InnerShadow color="WHITE" offsetX="3.0" offsetY="3.0">
+         <input>
+            <InnerShadow color="#00000080" offsetX="-3.0" offsetY="-3.0" />
+         </input>
+      </InnerShadow>
+   </effect>
+</HBox>

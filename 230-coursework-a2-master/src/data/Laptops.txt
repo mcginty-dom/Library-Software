@@ -1,0 +1,28 @@
+src/res/images/thumbnails/laptops/2.png	2	Apple MacBook Mid. Spec.	2013	2 Weeks	4	Apple	MacBook Pro with Retina Display	OS X Mavericks	4	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+3	true	null	null	0	
+0
+src/res/images/thumbnails/laptops/25.png	25	Colossus	1943	1 Day	0	Post Office Research Station	Colossus	N/A	0	0	
+0
+src/res/images/thumbnails/laptops/26.png	26	Windows IdeaPad Low. Spec.	2017	2 Weeks	12	Lenovo	IdeaPad 120S	Windows 10	12	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+3	true	null	null	0	
+4	true	null	null	0	
+5	true	null	null	0	
+6	true	null	null	0	
+7	true	null	null	0	
+8	true	null	null	0	
+9	true	null	null	0	
+10	true	null	null	0	
+11	true	null	null	0	
+0
+src/res/images/thumbnails/laptops/27.png	27	Ubuntu High. Spc.	2017	1 Week	2	Dell	XPS 15	Ubuntu 18.04	2	0	
+0	true	null	null	0	
+1	true	null	null	0	
+0
+src/res/images/thumbnails/laptops/28.png	28	Windows Gaming High. Spec.	2013	1 Week	0	Alienware	Alienware 17	Windows 7	0	0	
+0

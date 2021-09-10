@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Frontend.Control.CreateResourceController">
+   <center>
+      <BorderPane prefHeight="600.0">
+         <center>
+            <TabPane maxWidth="1000.0">
+               <tabs>
+                  <Tab closable="false">
+                     <content>
+                        <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                           <bottom>
+                              <HBox alignment="BOTTOM_LEFT" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="bookOutputLabel" textFill="RED">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children></HBox>
+                                    <HBox minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" spacing="15.0">
+                                       <children>
+                                          <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" text="Cancel">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#handleResetBook" text="Reset">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button defaultButton="true" mnemonicParsing="false" onAction="#handleSubmitBook" text="Submit">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </BorderPane.margin>
+                              </HBox>
+                           </bottom>
+                           <center>
+                              <VBox BorderPane.alignment="CENTER">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" spacing="10.0">
+                                       <children>
+                                          <HBox spacing="30.0">
+                                             <children>
+                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" minHeight="150.0" minWidth="150.0">
+                                                         <children>
+                                                            <ImageView fx:id="bookThumbnailPreview" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                                               <effect>
+                                                                  <DropShadow color="#0000001a" height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0" />
+                                                               </effect>
+                                                               <image>
+                                                                  <Image url="@../res/images/thumbnails/book_default.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                      <Button mnemonicParsing="false" onAction="#handleChangeBookThumbnail" prefWidth="1000.0" text="Change Thumbnail" />
+                                                   </children>
+                                                </VBox>
+                                                <GridPane alignment="CENTER_LEFT" hgap="10.0" vgap="20.0" HBox.hgrow="ALWAYS">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints vgrow="NEVER" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label text="Title">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="bookTitleField" prefWidth="200.0" promptText="Title" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label text="Publishing Year" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="bookPublishingYear" prefWidth="200.0" promptText="Publishing Year" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label text="Min. Loan Duration" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="bookMinimumLoanDuration" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Label text="Copies" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Spinner fx:id="bookCopyNumber" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </HBox>
+                                          <GridPane hgap="10.0" vgap="20.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" />
+                                                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+                                                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label minHeight="-Infinity" minWidth="-Infinity" text="Author">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="bookAuthor" promptText="Author" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label minHeight="-Infinity" minWidth="-Infinity" text="Publisher" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="bookPublisher" promptText="Publisher" GridPane.columnIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label minHeight="-Infinity" minWidth="-Infinity" text="Genre" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="bookGenre" promptText="Genre (optional)" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label minHeight="-Infinity" minWidth="-Infinity" text="ISBN" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="bookISBN" promptText="ISBN (optional)" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label minHeight="-Infinity" minWidth="-Infinity" text="Language" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="bookLanguage" promptText="Language (optional)" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </center>
+                           <padding>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </padding>
+                        </BorderPane>
+                     </content>
+                     <graphic>
+                        <Label text="Book">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                  </Tab>
+                  <Tab closable="false">
+                     <graphic>
+                        <Label text="DVD">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                     <content>
+                        <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                           <bottom>
+                              <HBox alignment="BOTTOM_LEFT" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="dvdOutputLabel" textFill="RED">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children></HBox>
+                                    <HBox minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" spacing="15.0">
+                                       <children>
+                                          <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" text="Cancel">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#handleResetDVD" text="Reset">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button defaultButton="true" mnemonicParsing="false" onAction="#handleSubmitDVD" text="Submit">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </BorderPane.margin>
+                              </HBox>
+                           </bottom>
+                           <center>
+                              <VBox BorderPane.alignment="CENTER">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" spacing="10.0">
+                                       <children>
+                                          <HBox spacing="30.0">
+                                             <children>
+                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" minHeight="150.0" minWidth="150.0">
+                                                         <children>
+                                                            <ImageView fx:id="dvdThumbnailPreview" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                                               <effect>
+                                                                  <DropShadow color="#0000001a" height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0" />
+                                                               </effect>
+                                                               <image>
+                                                                  <Image url="@../res/images/thumbnails/dvd_default.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                      <Button mnemonicParsing="false" onAction="#handleChangeDVDThumbnail" prefWidth="1000.0" text="Change Thumbnail" />
+                                                   </children>
+                                                </VBox>
+                                                <GridPane alignment="CENTER_LEFT" hgap="10.0" vgap="20.0" HBox.hgrow="ALWAYS">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints vgrow="NEVER" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label text="Title">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="dvdTitleField" prefWidth="200.0" promptText="Title" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label text="Publishing Year" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="dvdPublishingYear" prefWidth="200.0" promptText="Publishing Year" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label text="Min. Loan Duration" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="dvdMinimumLoanDuration" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Spinner fx:id="dvdCopyNumber" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                      <Label text="Copies" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </HBox>
+                                          <GridPane hgap="10.0" vgap="20.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" />
+                                                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+                                                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label minHeight="-Infinity" minWidth="-Infinity" text="Director">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="dvdDirectorField" promptText="Director" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label minHeight="-Infinity" minWidth="-Infinity" text="Runtime" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="dvdRuntimeField" promptText="Runtime" GridPane.columnIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label minHeight="-Infinity" minWidth="-Infinity" text="Language" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="dvdLanguageField" promptText="Language (optional)" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label minHeight="-Infinity" minWidth="-Infinity" text="Subtitle Languages" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="dvdSubtitlesField" promptText="Subtitle Languages Comma Separated (optional)" GridPane.columnIndex="1" GridPane.columnSpan="2147483647" GridPane.rowIndex="2">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </center>
+                           <padding>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </padding>
+                        </BorderPane>
+                     </content>
+                  </Tab>
+                  <Tab closable="false">
+                     <graphic>
+                        <Label text="Laptop">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                     </graphic>
+                     <content>
+                        <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                           <bottom>
+                              <HBox alignment="BOTTOM_LEFT" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="laptopOutputLabel" textFill="RED">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children></HBox>
+                                    <HBox minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" spacing="15.0">
+                                       <children>
+                                          <Button cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" text="Cancel">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#handleResetLaptop" text="Reset">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button defaultButton="true" mnemonicParsing="false" onAction="#handleSubmitLaptop" text="Submit">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </BorderPane.margin>
+                              </HBox>
+                           </bottom>
+                           <center>
+                              <VBox BorderPane.alignment="CENTER">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" spacing="10.0">
+                                       <children>
+                                          <HBox spacing="30.0">
+                                             <children>
+                                                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER" minHeight="150.0" minWidth="150.0">
+                                                         <children>
+                                                            <ImageView fx:id="laptopThumbnailPreview" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                                               <effect>
+                                                                  <DropShadow color="#0000001a" height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0" />
+                                                               </effect>
+                                                               <image>
+                                                                  <Image url="@../res/images/thumbnails/laptop_default.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </children>
+                                                      </HBox>
+                                                      <Button mnemonicParsing="false" onAction="#handleChangeLaptopThumbnail" prefWidth="1000.0" text="Change Thumbnail" />
+                                                   </children>
+                                                </VBox>
+                                                <GridPane alignment="CENTER_LEFT" hgap="10.0" vgap="20.0" HBox.hgrow="ALWAYS">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" />
+                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints vgrow="NEVER" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                                                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Label text="Title">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="laptopTitleField" prefWidth="200.0" promptText="Title" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label text="Release Year" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="laptopReleaseYearField" prefWidth="200.0" promptText="Release Year" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <Label text="Min. Loan Duration" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <ChoiceBox fx:id="laptopMinimumLoanDuration" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                      <Label text="Copies" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Spinner fx:id="laptopCopyNumber" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                   </children>
+                                                </GridPane>
+                                             </children>
+                                          </HBox>
+                                          <GridPane hgap="10.0" vgap="20.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" />
+                                                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" />
+                                                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" />
+                                                <ColumnConstraints halignment="LEFT" hgrow="ALWAYS" minWidth="10.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label minHeight="-Infinity" minWidth="-Infinity" text="Manufacturer">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="laptopManufacturerField" promptText="Manufacturer" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label minHeight="-Infinity" minWidth="-Infinity" text="Model" GridPane.columnIndex="2">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="laptopModelField" promptText="Model" GridPane.columnIndex="3">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                                <Label minHeight="-Infinity" minWidth="-Infinity" text="OS" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField fx:id="laptopOSField" promptText="Installed OS" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </center>
+                           <padding>
+                              <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                           </padding>
+                        </BorderPane>
+                     </content>
+                  </Tab>
+               </tabs>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </BorderPane.margin>
+            </TabPane>
+         </center>
+         <top>
+            <VBox alignment="TOP_CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/images/ui/TL_Icon.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="Create Resource">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Separator prefWidth="200.0" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+      </BorderPane>
+   </center>
+</BorderPane>

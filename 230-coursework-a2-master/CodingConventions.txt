@@ -1,0 +1,296 @@
+ _____           _ _               _____                            _   _
+/  __ \         | (_)             /  __ \                          | | (_)
+| /  \/ ___   __| |_ _ __   __ _  | /  \/ ___  _ ____   _____ _ __ | |_ _  ___  _ __  ___
+| |    / _ \ / _` | | '_ \ / _` | | |    / _ \| '_ \ \ / / _ \ '_ \| __| |/ _ \| '_ \/ __|
+| \__/\ (_) | (_| | | | | | (_| | | \__/\ (_) | | | \ V /  __/ | | | |_| | (_) | | | \__ \
+ \____/\___/ \__,_|_|_| |_|\__, |  \____/\___/|_| |_|\_/ \___|_| |_|\__|_|\___/|_| |_|___/
+                            __/ |
+                           |___/
+
+=== Order within a source file: ===
+
+Every class MUST be in its own file (except inner/anonymous
+classes)
+
+Source files must follow the order
+1. Import statements
+2. Javadoc for class
+3. Class declaration
+4. Class constants (static & final) variables
+5. Class (static) variables
+6. Instance variables
+7. Constuctors
+8. Methods
+
+For each of these items they must appear in the order
+
+public > protected > package (with no modifier) > private
+
+=== Order of modifiers: ===
+
+The modifiers in a constructor/method declaration appear in
+the order:
+
+access (public/protected/private) > abstract > static > final
+eg.
+static public void main(String[] args){..} INCORRECT
+public static void main(String[] args){..} CORRECT
+
+=== Length of lines: ===
+
+ WITHOUT GOOD REASON NO SINGLE LINE OF CODE SHOULD BE MORE THAN 80
+CHARACTERS LONG
+
+=== Length of methods: ===
+
+ WITHOUT VERY GOOD REASON NO METHOD SHOULD BE LONGER THAN 75 LINES.
+
+=== Nesting: ===
+
+ WITHOUT VERY GOOD REASON NO METHOD SHOULD HAVE MORE THAN 5 LEVELS
+OF INDENTATION
+
+=== Method parameters: ===
+
+ WITHOUT GOOD REASON NO METHOD SHOULD TAKE MORE THAN 5 PARAMETERS.
+Unless the method can ABSOLUTELY NOT be re-written to take fewer
+parameters
+
+=== Break and continue: ===
+
+NEVER USER BREAK OR CONTINUE.
+THIS IS A HARD RULE
+IF IT SEEMS ABSOLUTELY NECESSARY, RE-EVALUATE THE METHODOLOGY USED
+
+=== Identifiers and case: ===
+
+ Classes must be written in camel case and start with an upper case
+letter
+(i.e user statistics -> UserStatistics)
+exceptions: Acronyms may be written in all upper case
+(i.e HTML web page -> HTMLWebPage
+
+ Constants must be written in BLOCK CAPITALS separated with underscores
+(i.e NUMBER_PI)
+
+ ALL OTHER identifiers must be written in camel case starting with a lower 
+case letter.
+(i.e calculate rent -> calculateRent)
+
+=== Identifier names: ===
+
+ Class names must be SINGULAR NOUNS
+so: 
+Pack not Wolves
+Class not Students
+Runner not Running
+
+ Variable names must be meaningful and unanbiguous
+so:
+totalCost not tc
+executionSpeed not speed
+loanedBooksCount not num
+
+ Variables should be singular UNLESS they describe a collection
+so:
+String studentName
+String[] studentNames
+Arraylist<String> parentNames
+
+ Methods must have meaningful names containing a verb
+so:
+calculatePay(){..}
+stopProgram(){..}
+hackFBI(){..}
+
+=== Private variables: ===
+
+EVERY
+SINGLE
+CLASS
+VARIABLE
+MUST
+BE
+PRIVATE
+
+(With the exception of constats, which must be static AND final)
+
+=== Magic numbers: ===
+
+With the exceptions of 0 and 1, all other numbers that
+appear in your code should be constant variables. (1 and 0 may
+also be saved as variables if their use is not EXCEPTIONALY
+CLEAR)
+
+=== Javadoc comments: ===
+
+You must write a FULL and MEANINGFUL javadoc comment for all
+CLASSES AND METHODS.
+
+Class javadocs MUST have an @author (which may specifiy multiple
+authours)
+Method javadocs MUST have @param, @return, and @throws tags if
+the method takes parameters, returns a value or throws an exception
+(in the method signature)
+
+
+ALL JAVADOC FOR PUBLIC ENTITIES MUST NOT DISCUSS OR EXPOSE
+IMPLEMENTATION DETAILS.
+If your method is public it should make clear the abstract
+intention of the method NOT how it works.
+
+=== Spaces vs. Tabs ===
+
+Tabs.
+
+=== One declaration per line ===
+
+Single line multi-declarations are not allowed.
+so:
+int x, y, z; INCORRECT
+
+int x;
+int y;
+int z; CORRECT
+
+=== Placement of declarations ===
+
+A variable must be declared with the MINIMUM SCOPE to realise its purpose.
+
+so:
+
+public class Example{
+	private int x = 10;
+
+	private void method(){
+	if ( x > 7 ){
+		//...
+	}
+	}
+} INCORRECT
+
+public class Example{
+
+	private void method(){
+	int x = 10;
+	if ( x > 7 ){
+		//...
+	}
+	}
+} CORRECT (assuming x has no other purpose)
+
+Variables should be declared close to where they are used.
+
+=== Formatting: ===
+
+1. No blank space between a method NAME and the paranthesis listing
+its parameters
+i.e
+public void someMethod (int x){..} INCORRECT
+public void someMethod(int x){..} CORRECT
+2. Open brace appears at the end of the line the declares the
+block with a space before it
+i.e
+public void someMethod (int x)
+{
+	...
+} INCORRECT
+public void someMethod (int x){
+	...
+} CORRECT
+
+(Note this applies to all BLOCKS (if statements, methods, etc...)
+3. A single space must be before the opening brace, and the closing brace
+must have the same indentation as the opening declaration.
+4. Methods are separated by a SINGLE blank line
+
+=== IF and ELSE ===
+
+If statements must have a blank space following the keyword (if/else if)
+An if statement must have an opening brace at the end of the declaring line
+so:
+if (...){
+	...
+}
+if the statements has an else condition this must continue on the same line as
+the closing brace
+so:
+if (...){
+	...
+} else if (...){
+	...
+} else {
+	...
+}
+
+=== LOOPS ===
+1. Loops must have a blank space following the keyword 
+2. For loops must have spaces following semi-colons
+i.e
+for (int i = 0; i < 10; i++){ ...
+
+FOR BOTH IF STATEMENTS AND LOOPS:
+
+	BRACES MUST BE USED EVEN IF THE STATEMENT ONLY
+	CONTROLS ONE LINE
+
+so:
+
+if (i > 10)
+	System.out.println("i is greater than 10")
+
+INCORRECT
+
+if (i > 10){
+	System.out.println("i is greater than 10")
+}
+
+CORRECT
+
+
+=== Method declarations and method calls ===
+A keyword followed by a paranthesis should be separated by a blank space
+so:
+while (...) {
+	...
+}
+BUT
+not space between a method name and its opening paranthesis
+so:
+x = squareRootOf(16); <- No spaces before or after paranthesis
+BUT
+a space after commas in argument lists
+x = averageOf(10, 7, 2, 8); <- spaces after comments
+
+=== Operators ===
+All binary operators (except ".") myst be separated from their operands
+by a single space.
+
+Blank spaces should not be used to separate unary operators.
+
+So:
+
+a = 10 + 12; <- Spaces around "+" and "="
+b = i++; <- No space around "++" but around "="
+c = True || False; <- Space around "||" and "="
+d += (++8) / 16; <- Space around "/" and "+=" but not "++"
+
+
+=== Arrays ===
+All array access should be IMMIDIATLY followed by a square bracket
+so:
+x = array [0]; INCORRECT
+x = array[0]; CORRECT
+
+All array declarations should use java standard conventions
+so:
+
+private int numbers[] = new int[10]; INCORRECT
+private int[] numbers = new int[10]; CORRECT
+
+=== Casting ===
+
+All casts should be written with a single space
+x = (int)3.1415f; INCORRECT
+x = (int) 3.1415f; CORRECT
+

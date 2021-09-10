@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: #dddddd;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Frontend.Nodes.ResourceViewer">
+   <children>
+      <VBox alignment="CENTER" minHeight="90.0" minWidth="90.0">
+         <children>
+            <ImageView fx:id="resourceThumbnail" fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../res/images/ui/exclamation-mark.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+      <BorderPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="450.0">
+         <left>
+            <VBox BorderPane.alignment="TOP_LEFT">
+               <children>
+                  <Label fx:id="resourceYear" text="ERROR RETRIEVING YEAR">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="TOP_RIGHT" spacing="10.0">
+                     <children>
+                        <Label fx:id="resourceType" text="ERROR RETRIEVING TYPE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="resourceID" text="ERROR RETRIEVING ID">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="copyID" text="ERROR RETRIEVING ID">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <top>
+            <Label fx:id="resourceTitle" maxHeight="200.0" text="ERROR RETRIEVING TITLE" wrapText="true" BorderPane.alignment="TOP_LEFT">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+      </BorderPane>
+      <Separator layoutX="356.0" layoutY="10.0" orientation="VERTICAL" />
+      <BorderPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="175.0">
+         <center>
+            <VBox alignment="CENTER">
+               <children>
+                  <Label text="Minimum Loan Duration" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="resourceMinimumLoanDuration" text="ERROR RETRIEVING LOAN DURATION">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+      <Separator orientation="VERTICAL" />
+      <BorderPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="300.0">
+         <left>
+            <GridPane hgap="10.0" vgap="5.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="Reserved on:" GridPane.halignment="RIGHT">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Due on:" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="reservedOnLabel" text="(#Error)" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="dueOnLabel" text="(#Error)" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="overdueLabel" text="OVERDUE" textFill="RED" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../res/images/ui/exclamation-mark.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Button fx:id="cancelReservationButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Cancel Reservation" GridPane.columnSpan="2147483647" GridPane.rowIndex="3" />
+               </children>
+            </GridPane>
+         </left>
+      </BorderPane>
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+   <effect>
+      <InnerShadow color="WHITE" offsetX="3.0" offsetY="3.0">
+         <input>
+            <InnerShadow color="#00000080" offsetX="-3.0" offsetY="-3.0" />
+         </input>
+      </InnerShadow>
+   </effect>
+</HBox>

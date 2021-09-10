@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="400.0" minWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Frontend.Control.ResourceInspectController">
+   <center>
+      <Accordion prefHeight="400.0" prefWidth="600.0">
+        <panes>
+          <TitledPane fx:id="infoTitle" alignment="TOP_LEFT" text="Info">
+               <content>
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER">
+                     <content>
+                        <HBox alignment="TOP_CENTER">
+                           <children>
+                              <VBox alignment="TOP_CENTER" maxWidth="800.0" spacing="10.0">
+                                 <children>
+                                    <HBox alignment="CENTER" spacing="10.0">
+                                       <children>
+                                          <VBox alignment="TOP_CENTER" minHeight="150.0" minWidth="150.0">
+                                             <children>
+                                                <StackPane>
+                                                   <children>
+                                                      <ImageView fx:id="resourceThumbnail" fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../res/images/avatars/emoji/1f4d6.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <ImageView fx:id="editThumbnailIcon" fitHeight="75.0" fitWidth="75.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                                                         <image>
+                                                            <Image url="@../res/images/ui/pencil_icon.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                                <Label fx:id="idLabel" text="ID: #3829" />
+                                             </children>
+                                          </VBox>
+                                          <Label fx:id="titleLabel" alignment="CENTER_RIGHT" text="HARRY POTTER AND THE ORDER OF THE PHEONIX" textAlignment="CENTER" wrapText="true">
+                                             <font>
+                                                <Font size="32.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <Button fx:id="watchTrailerButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Watch Trailer" />
+                                    <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="NEVER">
+                                       <children>
+                                          <Label text="Average User Rating:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" spacing="2.0">
+                                             <children>
+                                                <Label fx:id="noReviewLabel" text="No reviews.">
+                                                   <font>
+                                                      <Font size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fx:id="star0" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../res/images/ui/star_image.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow color="#0000004b" height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0" />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fx:id="star1" fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../res/images/ui/star_image.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow color="#0000004b" height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0" />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fx:id="star2" fitHeight="25.0" fitWidth="25.0" layoutX="37.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../res/images/ui/star_image.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow color="#0000004b" height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0" />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fx:id="star3" fitHeight="25.0" fitWidth="25.0" layoutX="64.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../res/images/ui/star_half.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow color="#0000004b" height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0" />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fx:id="star4" fitHeight="25.0" fitWidth="25.0" layoutX="91.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../res/images/ui/star_empty.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow color="#0000004b" height="10.0" offsetX="2.0" offsetY="2.0" radius="4.5" width="10.0" />
+                                                   </effect>
+                                                </ImageView>
+                                             </children>
+                                          </HBox>
+                                          <Button mnemonicParsing="false" onAction="#handleReadReviews" text="Read Reviews" />
+                                          <Button layoutX="387.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleWriteReview" text="Write Review" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox alignment="CENTER" spacing="10.0">
+                                       <children>
+                                          <Label text="Minimum Loan Duration:">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ChoiceBox fx:id="minimumLoanDurationChooser" disable="true" prefWidth="150.0" />
+                                       </children>
+                                    </HBox>
+                                    <GridPane fx:id="infoDisplayPane" hgap="20.0" vgap="10.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="NEVER" minWidth="-Infinity" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                          <ColumnConstraints hgrow="NEVER" minWidth="-Infinity" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </GridPane>
+                                    <VBox fx:id="subTitleSection" spacing="15.0">
+                                       <children>
+                                          <Label text="Subtitle Languages">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <VBox>
+                                             <children>
+                                                <ListView fx:id="subTitleList" editable="true" prefHeight="200.0" prefWidth="200.0" />
+                                                <HBox alignment="TOP_RIGHT" spacing="5.0">
+                                                   <children>
+                                                      <Button fx:id="addSubtitleLanguageButton" mnemonicParsing="false" text="Add Language" visible="false" />
+                                                      <Button fx:id="removeSubtitleLanguageButton" mnemonicParsing="false" text="Remove Language" visible="false" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </content>
+                  </ScrollPane>
+               </content>
+            </TitledPane>
+          <TitledPane fx:id="copiesTitle" alignment="TOP_LEFT" text="Copies">
+               <content>
+                  <VBox>
+                     <children>
+                        <HBox alignment="TOP_CENTER">
+                           <children>
+                              <GridPane hgap="20.0" minHeight="-Infinity" vgap="10.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Copies in library:" />
+                                    <Label layoutX="10.0" layoutY="19.0" text="Copies available:" GridPane.rowIndex="1" />
+                                    <Label layoutX="10.0" layoutY="52.0" text="Expected available date:" GridPane.rowIndex="3" />
+                                    <Label fx:id="copiesInLibraryLabel" text="Error Loading Data" GridPane.columnIndex="1" />
+                                    <Label fx:id="copiesAvailableLabel" text="Error Loading Data" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label fx:id="queueSizeLabel" text="Error Loading Data" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label layoutX="20.0" layoutY="108.0" text="Queue size:" GridPane.rowIndex="2" />
+                                    <Label fx:id="expectedAvailableDateLabel" text="Error Loading Data" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </GridPane>
+                           </children>
+                        </HBox>
+                        <Separator prefWidth="200.0" />
+                        <ScrollPane fitToWidth="true" hbarPolicy="NEVER">
+                           <content>
+                              <VBox alignment="TOP_CENTER" fillWidth="false">
+                                 <children>
+                                    <GridPane fx:id="copiesGrid" hgap="25.0" vgap="10.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                             <children>
+                                                <Button mnemonicParsing="false">
+                                                   <graphic>
+                                                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../res/images/ui/rubbish-bin.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </graphic>
+                                                </Button>
+                                                <Label text="Copy #1:" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="1">
+                                             <children>
+                                                <CheckBox disable="true" mnemonicParsing="false" text="Available" />
+                                                <CheckBox disable="true" mnemonicParsing="false" selected="true" text="Reserved" />
+                                                <Button mnemonicParsing="false" text="View Copy Histoy" />
+                                                <Button mnemonicParsing="false" text="Issue Copy" />
+                                                <HBox alignment="CENTER" layoutX="109.0" layoutY="10.0" spacing="5.0">
+                                                   <children>
+                                                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@../res/images/ui/exclamation-mark.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                      <Label text="Overdue" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                        <HBox nodeOrientation="RIGHT_TO_LEFT">
+                           <children>
+                              <Button fx:id="addCopyButton" mnemonicParsing="false" onAction="#handleAddCopy" text="Add Copy" visible="false" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </center>
+   <bottom>
+      <HBox alignment="BOTTOM_RIGHT" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox spacing="20.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ToggleButton fx:id="enableEditingButton" mnemonicParsing="false" onAction="#onEnableEditing" text="Enable Editing" />
+               </children>
+            </HBox>
+            <Button fx:id="requestResourceButton" mnemonicParsing="false" onAction="#handleRequestResource" text="Request Resource" />
+            <Button cancelButton="true" layoutX="555.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleExitButton" text="Exit" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>

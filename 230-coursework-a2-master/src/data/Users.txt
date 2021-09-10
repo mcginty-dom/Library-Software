@@ -1,0 +1,40 @@
+U	Kurt	Noah	Lees	07918885206	Kurt@tawe-lib.org	78 Duckpit Lane		Upton	CH2 7BW	src\res\images\avatars\emoji\1f60e.png	09/12/2018	0.00
+0
+0
+0
+U	Thom	Ethan	Edwards	07083109812	Thom@Tawe-lib.org	76 Friar Street		Cleveland Tontine	DL6 3XG	src\res\images\avatars\emoji\1f42c.png	09/12/2018	0.00
+0
+0
+0
+U	Dave	Luke	Wilson	07861482386	Dave@Tawe-lib.org	54 Bouverie Road		Westry	PE15 4EL	src\res\images\avatars\emoji\1f996.png	09/12/2018	0.00
+0
+0
+0
+U	Alanis	Benjamin	Coleman	07838174386	Alanis@Tawe-lib.org	83 London Road		Colney	AL2 5TS	src\res\images\avatars\system_avatars\a07.png	09/12/2018	0.00
+0
+0
+0
+U	Ray	Charlotte	Davies	07986101339	Ray@Tawe-lib.org	20 Simone Weil Avenue		Wath	HG4 1GT	src\res\images\avatars\system_avatars\a09.png	09/12/2018	0.00
+0
+0
+0
+U	Bey	Morgan	Randall	07704163658	Bey@Tawe-lib.org	60 Uxbridge Road		Slapton	NN12 8EY	src\res\images\avatars\emoji\1f469-1f3fb-1f4bb.png	09/12/2018	0.00
+0
+0
+0
+U	Victoria	Jodie	Hargreaves	07951658028	Victoria@Tawe-lib.org	14 Copthorne Way		Camserney	PH15 9XJ	src\res\images\avatars\emoji\1f355.png	09/12/2018	0.00
+0
+3	4	0	4	1	14	0
+5	4	4	4	14	14
+L	Tim_The_Librarian	Tim	Savage	07764342852	Tim.Librarian@Tawe-lib.org	52 Seafield Place		Fox	CO7 5GL	src\res\images\avatars\emoji\1f4da.png	09/12/2018	0.00	09/12/2018	1
+0
+0
+0
+U	Liam	Finlay	Powell	07713119036	Liam@Tawe-lib.org	85 Broad Street		Lower Kinnerton	CH4 9TT	src\res\images\avatars\system_avatars\a04.png	09/12/2018	0.00
+0
+0
+0
+U	Sinéad	Amy	Wright	07847164369	Sinéad@Tawe-lib.org	1 Huntly Street		Barnard's Green	WR14 8PF	src\res\images\avatars\emoji\2665.png	09/12/2018	0.00
+0
+0
+0

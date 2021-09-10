@@ -1,0 +1,104 @@
+TMDb
+
+
+v3: 05494bb1a074c5bffdcbed95e807c05e
+
+v4: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwNTQ5NGJiMWEwNzRjNWJmZmRjYmVkOTVlODA3YzA1ZSIsInN1YiI6IjVjMDhlYjgxOTI1MTQxNDdhMzAxMDZjZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MEYHqnpvym3yvmOYcEZPOmauMwfYmw9QoqQbneAOn8o
+
+
+Search:
+
+HttpResponse<String> response = Unirest.get("https://api.themoviedb.org/3/search/movie?include_adult=false&page=1&query=Harry%20Potter%20and%20the%20Philosopher's%20Stone&language=en-US&api_key=05494bb1a074c5bffdcbed95e807c05e")
+  .body("{}")
+  .asString();
+
+Videos:
+
+HttpResponse<String> response = Unirest.get("https://api.themoviedb.org/3/movie/671/videos?language=en-US&api_key=05494bb1a074c5bffdcbed95e807c05e")
+  .body("{}")
+  .asString();
+
+
+Ex:
+
+Search:
+
+https://api.themoviedb.org/3/search/movie?api_key=05494bb1a074c5bffdcbed95e807c05e&language=en-US&query=Harry%20Potter%20and%20the%20Philosopher%27s%20Stone&page=1&include_adult=false
+
+{
+  "page": 1,
+  "total_results": 1,
+  "total_pages": 1,
+  "results": [
+    {
+      "vote_count": 11976,
+      "id": 671,
+      "video": false,
+      "vote_average": 7.8,
+      "title": "Harry Potter and the Philosopher's Stone",
+      "popularity": 51.835,
+      "poster_path": "/dCtFvscYcXQKTNvyyaQr2g2UacJ.jpg",
+      "original_language": "en",
+      "original_title": "Harry Potter and the Philosopher's Stone",
+      "genre_ids": [
+        12,
+        14,
+        10751
+      ],
+      "backdrop_path": "/hziiv14OpD73u9gAak4XDDfBKa2.jpg",
+      "adult": false,
+      "overview": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard -- with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths -- and about the villain who's to blame.",
+      "release_date": "2001-11-16"
+    }
+  ]
+}
+
+Videos:
+
+https://api.themoviedb.org/3/movie/671/videos?api_key=05494bb1a074c5bffdcbed95e807c05e&language=en-US
+
+{
+  "id": 671,
+  "results": [
+    {
+      "id": "58f5250dc3a3680e9800281e",
+      "iso_639_1": "en",
+      "iso_3166_1": "US",
+      "key": "PbdM1db3JbY",
+      "name": "Harry Potter and the Sorcerer's Stone - Trailer",
+      "site": "YouTube",
+      "size": 1080,
+      "type": "Trailer"
+    },
+    {
+      "id": "59da9dfb92514124eb049cab",
+      "iso_639_1": "en",
+      "iso_3166_1": "US",
+      "key": "ue-RthZ6WWk",
+      "name": "Harry Potter and the Sorcerer's Stone (2001) Teaser",
+      "site": "YouTube",
+      "size": 360,
+      "type": "Teaser"
+    },
+    {
+      "id": "59da9e1ec3a36861a30496a8",
+      "iso_639_1": "en",
+      "iso_3166_1": "US",
+      "key": "Q61YhARNOPg",
+      "name": "Harry Potter and the Sorcerer's Stone (2001) Trailer 2",
+      "site": "YouTube",
+      "size": 360,
+      "type": "Trailer"
+    },
+    {
+      "id": "59da9e39925141251f04c086",
+      "iso_639_1": "en",
+      "iso_3166_1": "US",
+      "key": "k71hjl3zWsA",
+      "name": "Harry Potter and the Sorcerer's Stone (2001) Trailer 3",
+      "site": "YouTube",
+      "size": 1080,
+      "type": "Trailer"
+    }
+  ]
+}

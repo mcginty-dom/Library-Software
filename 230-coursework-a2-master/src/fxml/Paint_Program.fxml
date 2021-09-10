@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Frontend.Control.PaintProgramController">
+   <center>
+      <BorderPane BorderPane.alignment="CENTER">
+         <center>
+            <BorderPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0">
+               <left>
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" nodeOrientation="RIGHT_TO_LEFT" pannable="true" BorderPane.alignment="CENTER">
+                     <content>
+                        <VBox fillWidth="false" spacing="5.0">
+                           <children>
+                              <ToggleButton fx:id="paintButton" mnemonicParsing="false" onAction="#handlePaintbrushSelected">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../res/images/ui/brush_Brush.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="BrushSelection" />
+                                 </toggleGroup>
+                              </ToggleButton>
+                              <ToggleButton fx:id="eraserButton" layoutX="10.0" layoutY="43.0" mnemonicParsing="false" onAction="#handleEraserSelected" toggleGroup="$BrushSelection">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../res/images/ui/brush_Eraser.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="bucketButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleFillBucketSelected" toggleGroup="$BrushSelection">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../res/images/ui/brush_Bucket.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="eyeDropperButton" layoutX="15.0" layoutY="91.0" mnemonicParsing="false" onAction="#handleEyeDropperSelected" toggleGroup="$BrushSelection">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../res/images/ui/tool_Eyedropper.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="lineButton" layoutX="15.0" layoutY="91.0" mnemonicParsing="false" onAction="#handleLineSelected" toggleGroup="$BrushSelection">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../res/images/ui/brush_Line.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="drawSquareButton" layoutX="15.0" layoutY="205.0" mnemonicParsing="false" onAction="#handleSquareSelected" toggleGroup="$BrushSelection">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../res/images/ui/brush_Square.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="drawCircleButton" layoutX="15.0" layoutY="243.0" mnemonicParsing="false" onAction="#handleCircleSelected" toggleGroup="$BrushSelection">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../res/images/ui/brush_Circle.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="dragButton" layoutX="15.0" layoutY="91.0" mnemonicParsing="false" onAction="#handleDragSelected" toggleGroup="$BrushSelection">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../res/images/ui/tool_Drag.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="magnifyButton" layoutX="15.0" layoutY="129.0" mnemonicParsing="false" onAction="#handleMagnifySelected" toggleGroup="$BrushSelection">
+                                 <graphic>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../res/images/ui/tool_Magnify.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </ToggleButton>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="15.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </left>
+               <top>
+                  <HBox BorderPane.alignment="CENTER" />
+               </top>
+               <center>
+                  <SplitPane fx:id="workingAreaSplitPane" BorderPane.alignment="CENTER">
+                     <items>
+                        <ScrollPane fx:id="canvasViewportArea" fitToHeight="true" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #222222;" vbarPolicy="NEVER" />
+                     </items>
+                  </SplitPane>
+               </center>
+            </BorderPane>
+         </center>
+         <top>
+            <HBox spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="newButton" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleCreateNewCanvas">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/images/ui/new_file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="openFileButton" layoutX="107.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleOpenFile">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/images/ui/open_file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="saveButton" layoutX="153.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleSaveButton">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/images/ui/save_file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="saveAsButton" layoutX="199.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleSaveAsButton">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/images/ui/save_as_file.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="saveAvatar" layoutX="153.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleSaveAvatar">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/images/ui/save_avatar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator orientation="VERTICAL" />
+                  <Button fx:id="undoButton" mnemonicParsing="false" onAction="#handleUndo">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/images/ui/undoIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="redoButton" layoutX="15.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleRedo">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/images/ui/redoIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Separator layoutX="245.0" layoutY="15.0" orientation="VERTICAL" />
+                  <ToggleButton fx:id="touchSupportToggle" mnemonicParsing="false" >
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/images/ui/touch_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Enable touch support. Prevents canvas from resizing when scrolling." />
+                     </tooltip>
+                  </ToggleButton>
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </top>
+      </BorderPane>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleCreateNewCanvas" text="New File" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleOpenFile" text="Open File" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSaveButton" text="Save" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSaveAsButton" text="Save As" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleSaveAvatar" text="Save To Avatar" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" onAction="#onClose" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleUndo" text="Undo" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleRedo" text="Redo" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

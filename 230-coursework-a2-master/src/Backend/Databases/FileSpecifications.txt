@@ -1,0 +1,25 @@
+Transaction Files:
+
+R | Transaction ID(int) | Username(String) | Copy ID(int) | Resource ID(int) | Reserved(bool) | Transaction Date(dd/MM/yy String) | Transaction Time(hh:mm:ss String) | Returned Date(dd/MM/YY hh:mm:ss String/null)
+
+Financial Transaction Files:
+Payments:
+F | P | Username(String) | Value(int) | Transaction Date(dd/MM/yy hh:mm:ss String)
+Fines:
+F | F | Username(String) | Value(int) | Transaction Date(dd/MM/yy hh:mm:ss String) | Copy ID(int) | Resource ID(int) | Days Overdue(int)
+
+Resource Files:
+
+Thumbnail(String) | ID(int) | Title(String) | Year(int) | Min. Loan Duration(String) | Next Copy ID(int) | Author(String) | Publisher(String) | Genre(String) | ISBN(String) | Language(String) | Copy List Size(int) | Request Queue Size(int) | Username in Queue[0](String) | Username in Queue[1](String)| ... | Username in Queue[n](String)
+Copy ID(int) | is Available(boolean) | due Date(dd/MM/yyyy String/null) | currentTransactionID(int/null) | historySize(int) | history Transaction ID[0](int) | history Transaction ID[1](int) | ... | history Transaction ID[n](int)
+...
+... // One line for each copy of this resource
+...
+Number of reviews(int) | Review Rating[0](int) | Review String[0](String) | Review Username[0](String) | Review Rating[1](int) | Review String[1](String) | Review Username[1](String) | ... | Review Rating[n](int) | Review String[n](String) | Review Username[n](String)
+
+User Files:
+
+User type(String U/L) | Username(String) | First name(String) | Last name(String) | Phone number(String) | Email Address(String) | AddressLine1(String) | AddressLine2(String) | Town(String) | Postcode(String) | Image Location(String) | Account creation date(dd/MM/yy String) | Account Balance(float)
+Number of borrowed items(int) | Borrowed Resource ID[0](int) | Borrowed Copy ID[0](int) | Borrowed Resource ID[1](int) | Borrowed Copy ID[1](int) | ... | Borrowed Resource ID[n](int) | Borrowed Copy ID[n](int)
+Number of reserved items(int) | Reserved Resource ID[0](int) | Reserved Copy ID[0](int) | Reserved Resource ID[1](int) | Reserved Copy ID[1](int) | ... | Reserved Resource ID[n](int) | Reserved Copy ID[n](int)
+Number of requested items(int) | Requested Resource ID[0](int) | Requested Resource ID[1](int) | ... | Requested Resource ID[n](int)

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" spacing="15.0">
+               <children>
+                  <HBox maxHeight="300.0" maxWidth="600.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <SplitMenuButton mnemonicParsing="false" text="Name">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#handleSelectName" text="Name" />
+                            <MenuItem mnemonicParsing="false" onAction="#handleSelectID" text="ID" />
+                              <MenuItem mnemonicParsing="false" onAction="#handleSelectYear" text="Year" />
+                          </items>
+                        </SplitMenuButton>
+                        <TextField fx:id="searchBar" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                        <Button mnemonicParsing="false" onAction="#handleSearch">
+                           <graphic>
+                              <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/images/ui/Magnifying_glass_icon.svg.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <CheckBox fx:id="booksToggle" mnemonicParsing="false" selected="true" text="Books" />
+                  <CheckBox fx:id="dvdsToggle" mnemonicParsing="false" selected="true" text="DVDs" />
+                  <CheckBox fx:id="laptopsToggle" mnemonicParsing="false" selected="true" text="Laptops" />
+                  <CheckBox fx:id="availableToggle" layoutX="759.0" layoutY="14.0" mnemonicParsing="false" text="Available" />
+               </children>
+            </HBox>
+            <Separator prefWidth="200.0" />
+            <TreeTableView fx:id="resultsTable" VBox.vgrow="ALWAYS">
+              <columns>
+                  <TreeTableColumn prefWidth="75.0" text="Thumbnail" />
+                <TreeTableColumn prefWidth="75.0" text="Name" />
+                <TreeTableColumn prefWidth="75.0" text="ID" />
+                  <TreeTableColumn prefWidth="75.0" text="Type" />
+                  <TreeTableColumn prefWidth="75.0" text="Year" />
+                  <TreeTableColumn prefWidth="75.0" text="Copies" />
+                  <TreeTableColumn prefWidth="75.0" text="Available" />
+              </columns>
+               <columnResizePolicy>
+                  <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TreeTableView>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>

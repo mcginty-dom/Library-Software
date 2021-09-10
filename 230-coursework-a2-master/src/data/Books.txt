@@ -1,0 +1,88 @@
+src/res/images/thumbnails/books/1.png	1	Harry Potter and the Philosopher's Stone	1997	2 Weeks	8	J. K. Rowling	Bloomsbury	Fantasy	0-74753269-9	English	3	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+0
+src/res/images/thumbnails/books/4.png	4	The Fellowship of the Ring	1954	4 Weeks	2	J. R. R. Tolkien	Allen & Unwin	Fantasy	0261102354	English	2	1	Victoria
+0	false	06/01/2019	1	0	
+1	false	null	2	0	
+0
+src/res/images/thumbnails/books/5.png	5	The Adventures of Captain Underpants	1997	1 Day	7	Dav Pilkey	Scholastic	Children's novel	0-590-84628-0	English	7	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+3	true	null	null	0	
+4	true	null	null	0	
+5	true	null	null	0	
+6	true	null	null	0	
+0
+src/res/images/thumbnails/books/7.png	7	Harry Potter and the Chamber of Secrets	1998	2 Weeks	4	J. K. Rowling	Bloomsbury	Fantasy	0-7475-3849-2	English	4	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+3	true	null	null	0	
+0
+src/res/images/thumbnails/books/8.png	8	Harry Potter and the Prisoner of Azkaban	1999	2 Weeks	1	J. K. Rowling	Bloomsbury	Fantasy	0-7475-4215-5	English	1	0	
+0	true	null	null	0	
+0
+src/res/images/thumbnails/books/9.png	9	Harry Potter and the Goblet of Fire	2000	2 Weeks	6	J. K. Rowling	Bloomsbury	Fantasy	0-7475-4624-X	English	6	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+3	true	null	null	0	
+4	true	null	null	0	
+5	true	null	null	0	
+0
+src/res/images/thumbnails/books/10.png	10	Harry Potter and the Order of the Phoenix	2003	2 Weeks	4	J. K. Rowling	Bloomsbury	Fantasy	0-7475-5100-6	English	4	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+3	true	null	null	0	
+0
+src/res/images/thumbnails/books/11.png	11	Harry Potter and the Half-Blood Prince	2005	2 Weeks	8	J. K. Rowling	Bloomsbury	Fantasy	0-7475-8108-8	English	8	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+3	true	null	null	0	
+4	true	null	null	0	
+5	true	null	null	0	
+6	true	null	null	0	
+7	true	null	null	0	
+0
+src/res/images/thumbnails/books/12.png	12	Harry Potter and the Deathly Hallows	2007	2 Weeks	3	J. K. Rowling	Bloomsbury	Fantasy	0-545-01022-5	English	3	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+0
+src/res/images/thumbnails/books/13.png	13	Java For Dummies (7th Revised edition edition)	2017	4 Weeks	3	Barry A. Burd	John Wiley & Sons	Educational	1119235553	Java	3	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+0
+src/res/images/thumbnails/books/14.png	14	Modelling Computing Systems: Mathematics for Computer Science	2013	1 Week	1	Faron Moller	Springer	Educational	9781848003217	English	1	1	Victoria
+0	false	16/12/2018	3	0	
+0
+src/res/images/thumbnails/books/15.png	15	Ainsley Harriott's Friends & Family Cookbook: Over 200 Reasons to Eat In	2004	1 Week	2	Ainsley Harriott	BBC Books	Cooking	0563487569	English	2	0	
+0	true	null	null	0	
+1	true	null	null	0	
+0
+src/res/images/thumbnails/books/16.png	16	Gordon Ramsay Ultimate Fit Food: Mouth-watering recipes to fuel you for life	2018	2 Weeks	3	Gordon Ramsay	Hodder & Stoughton	Cooking		English	3	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+0
+src/res/images/thumbnails/books/17.png	17	Iliad	1995	4 Weeks	3	Homer	Wordsworth Editions	Classical	1853262420	English	3	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+0
+src/res/images/thumbnails/books/18.png	18	The Art Of War	2018	1 Day	6	Sun Tzu	CreateSpace Independent Publishing Platform	Classical	1505572835	English	6	0	
+0	true	null	null	0	
+1	true	null	null	0	
+2	true	null	null	0	
+3	true	null	null	0	
+4	true	null	null	0	
+5	true	null	null	0	
+0
+src/res/images/thumbnails/books/19.png	19	The Ultimate Guide to Mastering Command Blocks!: Minecraft Keys to Unlocking Secret Commands	2016	1 Day	0	Triumph Books	Triumph Books	Educational	1629372323	English	0	0	
+0
